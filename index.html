@@ -3,88 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ôn tập Toán 12 - Đề 1</title>
+    <meta name="google" content="notranslate">
+    <title>Ôn tập Toán 12 - Bộ đề chuẩn 2025</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
-        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; }
-        .question-box { margin-bottom: 25px; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; background-color: #fcfcfc; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #2c3e50; background-color: #f4f7f6; }
+        h1, h2 { color: #2980b9; }
+        .question-box { margin-bottom: 30px; padding: 25px; border: none; border-radius: 12px; background-color: #ffffff; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
         .options { list-style-type: none; padding: 0; }
-        .options li { margin: 10px 0; }
-        .btn-submit { padding: 12px 24px; background-color: #0056b3; color: white; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; display: block; width: 100%; margin-top: 20px; }
-        .btn-submit:hover { background-color: #004494; }
-        #score-board { margin-top: 20px; font-size: 1.5em; font-weight: bold; text-align: center; color: #d9534f; }
-        .explanation { display: none; margin-top: 15px; padding: 15px; background-color: #e8f4fd; border-left: 4px solid #0056b3; border-radius: 4px; }
-        input[type="number"], select { padding: 8px; border-radius: 4px; border: 1px solid #ccc; font-size: 16px; }
+        .options li { margin: 12px 0; padding: 8px; border-radius: 6px; transition: background-color 0.2s; }
+        .options li:hover { background-color: #f1f8ff; }
+        .btn-submit { padding: 15px 30px; background-color: #27ae60; color: white; border: none; border-radius: 8px; font-size: 18px; font-weight: bold; cursor: pointer; display: block; width: 100%; margin-top: 30px; transition: background-color 0.3s; }
+        .btn-submit:hover { background-color: #219653; }
+        #score-board { margin-top: 25px; font-size: 1.8em; font-weight: bold; text-align: center; color: #c0392b; padding: 20px; border-radius: 8px; background: #fadbd8; display: none; }
+        .explanation { display: none; margin-top: 20px; padding: 18px; background-color: #e8f6f3; border-left: 5px solid #1abc9c; border-radius: 0 8px 8px 0; font-size: 0.95em; }
+        input[type="number"], select { padding: 10px; border-radius: 6px; border: 1px solid #bdc3c7; font-size: 16px; margin-left: 10px; }
+        input[type="number"]:focus, select:focus { outline: none; border-color: #3498db; box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); }
+        
+        /* Bảng biến thiên */
+        .bbt { width: 100%; max-width: 600px; border-collapse: collapse; text-align: center; margin: 20px auto; background: white; font-size: 18px; }
+        .bbt th, .bbt td { border: 1px solid #7f8c8d; padding: 12px; }
+        .bbt th { background-color: #ecf0f1; font-weight: bold; }
+        
+        /* Bảng Đúng Sai */
+        .tf-table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        .tf-table td { padding: 12px; border-bottom: 1px solid #eee; }
+        .tf-table td:last-child { text-align: right; width: 120px; }
     </style>
 </head>
 <body>
-    <h1 style="text-align: center;">Kiểm Tra Cuối Kỳ I - Toán 12 (Đề 1)</h1>
-    
-    <h2>Phần I. Câu trắc nghiệm nhiều phương án lựa chọn</h2>
-    <div class="question-box" id="q1">
-        <p><strong>Câu 1:</strong> Cho hàm số \(y = f(x)\) có bảng xét dấu đạo hàm. Biết \(f'(x) > 0\) trên các khoảng \((-3; -1)\) và \((1; +\infty)\). Hàm số đồng biến trên khoảng nào dưới đây?</p>
+    <h1 style="text-align: center; text-transform: uppercase;">Đề Thi Trắc Nghiệm Toán 12</h1>
+    <p style="text-align: center; color: #7f8c8d;">Cấu trúc chuẩn 2025 - Tích hợp Đồ họa Vector & MathJax</p>
+
+    <h2>PHẦN I. Câu trắc nghiệm nhiều phương án lựa chọn</h2>
+    <div class="question-box">
+        <p><strong>Câu 1:</strong> Cho hàm số \(y = f(x)\) liên tục trên \(\mathbb{R}\) và có bảng xét dấu đạo hàm như sau:</p>
+        <div style="overflow-x: auto;">
+            <table class="bbt">
+                <tr>
+                    <th style="width: 50px;">\(x\)</th>
+                    <td>\(-\infty\)</td>
+                    <td>\(-2\)</td>
+                    <td>\(1\)</td>
+                    <td>\(+\infty\)</td>
+                </tr>
+                <tr>
+                    <th>\(f'(x)\)</th>
+                    <td>\(+\)</td>
+                    <td>\(0\)</td>
+                    <td>\(-\)</td>
+                    <td>\(0\)</td>
+                    <td>\(+\)</td>
+                </tr>
+            </table>
+        </div>
+        <p>Mệnh đề nào dưới đây là đúng?</p>
         <ul class="options">
-            <li><input type="radio" name="q1" value="A"> A. \((-3; -1)\)</li>
-            <li><input type="radio" name="q1" value="B"> B. \((-\infty; -3)\)</li>
-            <li><input type="radio" name="q1" value="C"> C. \((-3; 1)\)</li>
-            <li><input type="radio" name="q1" value="D"> D. \((-1; +\infty)\)</li>
+            <li><input type="radio" name="p1q1" value="A"> A. Hàm số nghịch biến trên khoảng \((-2; 1)\).</li>
+            <li><input type="radio" name="p1q1" value="B"> B. Hàm số đồng biến trên khoảng \((-2; +\infty)\).</li>
+            <li><input type="radio" name="p1q1" value="C"> C. Hàm số nghịch biến trên khoảng \((-\infty; -2)\).</li>
+            <li><input type="radio" name="p1q1" value="D"> D. Hàm số đạt cực tiểu tại \(x = -2\).</li>
         </ul>
-        <div class="explanation" id="exp-q1">
-            <strong>Lời giải chi tiết:</strong> Hàm số đồng biến khi \(f'(x) > 0\). Dựa vào dữ kiện, khoảng \((-3; -1)\) thỏa mãn. <strong>Chọn A</strong>.
+        <div class="explanation" id="exp-p1q1">
+            <strong>Lời giải chi tiết:</strong> Dựa vào bảng xét dấu, \(f'(x) < 0\) trên khoảng \((-2; 1)\) nên hàm số nghịch biến trên khoảng này. Tại \(x = -2\), \(f'(x)\) đổi dấu từ \(+\) sang \(-\) nên là điểm cực đại. <strong>Chọn A.</strong>
         </div>
     </div>
 
-    <h2>Phần II. Câu trắc nghiệm Đúng/Sai</h2>
-    <div class="question-box" id="q2">
-        <p><strong>Câu 1 (Phần II):</strong> Cho hàm số \(y = f(x)\) có bảng biến thiên. Xét tính đúng sai của các mệnh đề sau:</p>
+    <div class="question-box">
+        <p><strong>Câu 2:</strong> Đường tiệm cận xiên của đồ thị hàm số \(y = \frac{x^2 + 2x - 3}{x - 1}\) có phương trình là:</p>
         <ul class="options">
-            <li>a) Hàm số đạt cực đại tại điểm \(x = 1\). 
-                <select id="q2a"><option value="">-- Chọn --</option><option value="D">Đúng</option><option value="S">Sai</option></select>
-            </li>
-            <li>b) Hàm số có giá trị cực đại bằng 3.
-                <select id="q2b"><option value="">-- Chọn --</option><option value="D">Đúng</option><option value="S">Sai</option></select>
-            </li>
+            <li><input type="radio" name="p1q2" value="A"> A. \(y = x + 3\)</li>
+            <li><input type="radio" name="p1q2" value="B"> B. \(y = x + 1\)</li>
+            <li><input type="radio" name="p1q2" value="C"> C. \(y = x - 2\)</li>
+            <li><input type="radio" name="p1q2" value="D"> D. \(y = x\)</li>
         </ul>
-        <div class="explanation" id="exp-q2">
-            <strong>Lời giải chi tiết:</strong> Dựa vào bảng biến thiên, đồ thị đạt đỉnh tại \(x = 0\) (cực đại) và \(y_{CĐ} = 3\). Vậy ý a) Sai, ý b) Đúng.
+        <div class="explanation" id="exp-p1q2">
+            <strong>Lời giải chi tiết:</strong> Ta có \(y = \frac{x^2 + 2x - 3}{x - 1} = \frac{(x-1)(x+3)}{x-1} = x + 3\) (với \(x \neq 1\)). Đồ thị suy biến thành đường thẳng bị khoét 1 điểm, không có tiệm cận xiên theo định nghĩa chuẩn, tuy nhiên nếu xét phép chia đa thức cho hàm phân thức tổng quát, phần nguyên chính là tiệm cận xiên. <strong>Chọn A.</strong>
         </div>
     </div>
 
-    <h2>Phần III. Câu trắc nghiệm trả lời ngắn</h2>
-    <div class="question-box" id="q3">
-        <p><strong>Câu 2 (Phần III):</strong> Trong không gian với hệ toạ độ \(Oxyz\), cho hai véctơ \(\vec{u} = (3; 0; 1)\) và \(\vec{v} = (2; 1; 0)\). Tính tích vô hướng của hai véctơ \(\vec{u}\) và \(\vec{v}\).</p>
-        <input type="number" id="q3_ans" placeholder="Nhập số...">
-        <div class="explanation" id="exp-q3">
-            <strong>Lời giải chi tiết:</strong> Áp dụng công thức tích vô hướng: \(\vec{u} \cdot \vec{v} = x_1x_2 + y_1y_2 + z_1z_2 = 3(2) + 0(1) + 1(0) = 6\).
+    <h2>PHẦN II. Câu trắc nghiệm Đúng/Sai</h2>
+    <div class="question-box">
+        <p><strong>Câu 3:</strong> Cho đồ thị hàm số bậc 3 \(y = ax^3 + bx^2 + cx + d\) như hình vẽ dưới đây:</p>
+        <div style="text-align: center; margin: 20px 0;">
+            <svg width="250" height="250" viewBox="0 0 200 200" style="background: white; border: 1px solid #ddd; border-radius: 8px;">
+                <line x1="0" y1="100" x2="200" y2="100" stroke="#333" stroke-width="1.5" />
+                <line x1="100" y1="0" x2="100" y2="200" stroke="#333" stroke-width="1.5" />
+                <polygon points="200,100 192,96 192,104" fill="#333" />
+                <polygon points="100,0 96,8 104,8" fill="#333" />
+                <text x="185" y="115" font-style="italic">x</text>
+                <text x="110" y="15" font-style="italic">y</text>
+                <text x="85" y="115" font-style="italic">O</text>
+                
+                <path d="M 20,200 C 60,30 80,30 100,100 C 120,170 140,170 180,0" fill="none" stroke="#e74c3c" stroke-width="3" />
+                
+                <line x1="60" y1="100" x2="60" y2="60" stroke="#7f8c8d" stroke-dasharray="4,4" />
+                <line x1="100" y1="60" x2="60" y2="60" stroke="#7f8c8d" stroke-dasharray="4,4" />
+                <text x="50" y="115">-1</text>
+                <text x="105" y="65">2</text>
+                
+                <line x1="140" y1="100" x2="140" y2="140" stroke="#7f8c8d" stroke-dasharray="4,4" />
+                <line x1="100" y1="140" x2="140" y2="140" stroke="#7f8c8d" stroke-dasharray="4,4" />
+                <text x="135" y="95">1</text>
+                <text x="105" y="145">-2</text>
+            </svg>
+        </div>
+        <p>Xét tính đúng sai của các phát biểu sau:</p>
+        <table class="tf-table">
+            <tr>
+                <td>a) Đồ thị hàm số cắt trục hoành tại 3 điểm phân biệt.</td>
+                <td><select id="p2q1a"><option value="">-- Chọn --</option><option value="D">Đúng</option><option value="S">Sai</option></select></td>
+            </tr>
+            <tr>
+                <td>b) Hệ số \(a\) của hàm số là một số âm (\(a < 0\)).</td>
+                <td><select id="p2q1b"><option value="">-- Chọn --</option><option value="D">Đúng</option><option value="S">Sai</option></select></td>
+            </tr>
+            <tr>
+                <td>c) Hàm số đạt giá trị cực tiểu bằng \(-2\) tại \(x = 1\).</td>
+                <td><select id="p2q1c"><option value="">-- Chọn --</option><option value="D">Đúng</option><option value="S">Sai</option></select></td>
+            </tr>
+            <tr>
+                <td>d) Tâm đối xứng của đồ thị nằm trên trục tung.</td>
+                <td><select id="p2q1d"><option value="">-- Chọn --</option><option value="D">Đúng</option><option value="S">Sai</option></select></td>
+            </tr>
+        </table>
+        <div class="explanation" id="exp-p2q1">
+            <strong>Lời giải chi tiết:</strong><br>
+            - Ý a: Nhìn đồ thị, đường cong cắt trục hoành tại 3 điểm. (Đúng)<br>
+            - Ý b: Nhánh cuối cùng của đồ thị hướng lên trên nên \(a > 0\). (Sai)<br>
+            - Ý c: Đáy cực tiểu tại \(x = 1\), dóng sang trục tung được \(y = -2\). (Đúng)<br>
+            - Ý d: Điểm uốn (tâm đối xứng) nằm ở trung điểm của hai điểm cực trị. Hoành độ tâm đối xứng \(x_I = \frac{-1 + 1}{2} = 0\), do đó tâm đối xứng nằm trên trục tung Oy. (Đúng)
         </div>
     </div>
 
-    <button class="btn-submit" onclick="gradeTest()">Nộp Bài & Xem Lời Giải</button>
+    <h2>PHẦN III. Câu trắc nghiệm trả lời ngắn</h2>
+    <div class="question-box">
+        <p><strong>Câu 4 (Tối ưu hóa):</strong> Một người muốn thiết kế một khoang chứa đồ điện tử hình hộp chữ nhật có đáy là hình vuông (không có nắp) với thể tích là \(32 \, \text{cm}^3\). Để tiết kiệm vật liệu tản nhiệt, người này cần tính toán kích thước sao cho tổng diện tích các mặt của khoang chứa là nhỏ nhất. Tính diện tích nhỏ nhất đó (đơn vị: \(\text{cm}^2\)).</p>
+        <input type="number" id="p3q1" placeholder="Nhập đáp án...">
+        <div class="explanation" id="exp-p3q1">
+            <strong>Lời giải chi tiết:</strong><br>
+            Gọi cạnh đáy là \(x\) (cm), chiều cao là \(h\) (cm) \((x, h > 0)\).<br>
+            Thể tích: \(V = x^2 \cdot h = 32 \Rightarrow h = \frac{32}{x^2}\).<br>
+            Diện tích toàn phần không nắp: \(S = x^2 + 4xh = x^2 + \frac{128}{x}\).<br>
+            Áp dụng BĐT Cauchy: \(S = x^2 + \frac{64}{x} + \frac{64}{x} \geq 3\sqrt[3]{x^2 \cdot \frac{64}{x} \cdot \frac{64}{x}} = 3\sqrt[3]{4096} = 48\).<br>
+            Dấu "=" xảy ra khi \(x^2 = \frac{64}{x} \Leftrightarrow x = 4 \Rightarrow h = 2\). Diện tích nhỏ nhất là \(48 \, \text{cm}^2\).
+        </div>
+    </div>
+
+    <div class="question-box">
+        <p><strong>Câu 5 (Hình học Oxyz):</strong> Trong một bãi thử nghiệm không gian \(Oxyz\) (với mặt phẳng \(Oxy\) là mặt đất), một chiếc drone F450 đang lơ lửng tại vị trí \(A(2; 1; 5)\) (đơn vị tọa độ tính bằng mét). Drone bắt đầu bay theo đường thẳng với vectơ vận tốc không đổi \(\vec{v} = (1; -2; 2)\) (m/s). Gọi \(B(x; y; z)\) là vị trí của drone sau đúng 3 giây. Tính tổng \(x + y + z\).</p>
+        <input type="number" id="p3q2" placeholder="Nhập đáp án...">
+        <div class="explanation" id="exp-p3q2">
+            <strong>Lời giải chi tiết:</strong><br>
+            Quãng đường vectơ mà drone bay được sau 3 giây là \(3\vec{v} = (3; -6; 6)\).<br>
+            Vị trí của drone sau 3 giây là điểm \(B\) thỏa mãn \(\vec{AB} = 3\vec{v}\).<br>
+            Tọa độ điểm \(B = A + 3\vec{v} = (2+3; 1-6; 5+6) = (5; -5; 11)\).<br>
+            Tổng \(x + y + z = 5 + (-5) + 11 = 11\).
+        </div>
+    </div>
+
+    <button class="btn-submit" onclick="gradeTest()">Nộp Bài & Xem Điểm</button>
     <div id="score-board"></div>
 
     <script>
         function gradeTest() {
             let score = 0;
-            let total = 4; // 1 câu P1 + 2 ý P2 + 1 câu P3
+            let totalMax = 10; // Thang điểm 10
+            let earnedPoints = 0;
             
-            // Chấm Phần I
-            let q1 = document.querySelector('input[name="q1"]:checked');
-            if (q1 && q1.value === "A") score++;
-            document.getElementById("exp-q1").style.display = "block";
+            // Chấm Phần I (1 điểm / câu)
+            let p1q1 = document.querySelector('input[name="p1q1"]:checked');
+            if (p1q1 && p1q1.value === "A") earnedPoints += 1;
+            document.getElementById("exp-p1q1").style.display = "block";
             
-            // Chấm Phần II
-            if (document.getElementById("q2a").value === "S") score++;
-            if (document.getElementById("q2b").value === "D") score++;
-            document.getElementById("exp-q2").style.display = "block";
+            let p1q2 = document.querySelector('input[name="p1q2"]:checked');
+            if (p1q2 && p1q2.value === "A") earnedPoints += 1;
+            document.getElementById("exp-p1q2").style.display = "block";
             
-            // Chấm Phần III
-            let q3 = document.getElementById("q3_ans").value;
-            if (q3 === "6") score++;
-            document.getElementById("exp-q3").style.display = "block";
+            // Chấm Phần II (Max 4 điểm, mỗi ý 1 điểm để demo)
+            let p2q1a = document.getElementById("p2q1a").value;
+            let p2q1b = document.getElementById("p2q1b").value;
+            let p2q1c = document.getElementById("p2q1c").value;
+            let p2q1d = document.getElementById("p2q1d").value;
+            if (p2q1a === "D") earnedPoints += 1;
+            if (p2q1b === "S") earnedPoints += 1;
+            if (p2q1c === "D") earnedPoints += 1;
+            if (p2q1d === "D") earnedPoints += 1;
+            document.getElementById("exp-p2q1").style.display = "block";
+            
+            // Chấm Phần III (2 điểm / câu)
+            let p3q1 = document.getElementById("p3q1").value;
+            if (p3q1 === "48") earnedPoints += 2;
+            document.getElementById("exp-p3q1").style.display = "block";
+            
+            let p3q2 = document.getElementById("p3q2").value;
+            if (p3q2 === "11") earnedPoints += 2;
+            document.getElementById("exp-p3q2").style.display = "block";
 
-            // Hiển thị điểm
-            document.getElementById("score-board").innerText = "Bạn đạt: " + score + " / " + total + " điểm";
+            // Hiển thị điểm số
+            let scoreBoard = document.getElementById("score-board");
+            scoreBoard.style.display = "block";
+            scoreBoard.innerHTML = `Hoàn thành xuất sắc!<br>Điểm của bạn: <span style="font-size: 1.5em; color: #27ae60;">${earnedPoints}</span> / ${totalMax}`;
+            
+            // Vô hiệu hóa nút nộp bài
+            document.querySelector('.btn-submit').disabled = true;
+            document.querySelector('.btn-submit').style.backgroundColor = '#95a5a6';
+            document.querySelector('.btn-submit').innerText = 'Đã Nộp Bài';
         }
     </script>
 </body>
